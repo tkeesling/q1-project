@@ -15,6 +15,23 @@ $(document).ready(function() {
 			obj.age = age
 			obj.weight.value = weight
 			obj.height.value = height
+
+			// send AJAX POST request
+			$.ajax({
+				url: 'https://bmi.p.mashape.com/',
+				headers: {
+					'X-Mashape-Key': 'DTVX3E5LwAmshSXl3UmrvwEF8nwJp1dXZzXjsnVcj6pKHf8U3n',
+					'Content-Type': 'application/json',
+					'Accept': 'application/json'
+				},
+				method: 'POST',
+				dataType: 'json',
+				data: JSON.stringify(obj),
+				success: function(data) {
+					var object = data
+					console.log(object);
+				}
+			}) // end of .ajax
 		}) // end of getJSON
 	}) // end of btn click
 }) // end of doc ready
