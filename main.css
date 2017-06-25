@@ -7,3 +7,19 @@ body {
 main {
   flex: 1 0 auto;
 }
+
+.card {
+  margin-top: 2rem;
+}
+
+.middleSection {}
+
+
+/*<form action="#">
+  <p>Sex:
+    <input name="sex" type="radio" id="male" />
+    <label for="male">Male</label>
+    <input name="sex" type="radio" id="female" />
+    <label for="female">Female</label>
+  </p>
+</form>*/
