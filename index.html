@@ -80,14 +80,14 @@
               <form class="myForm" action="/" method="post">
 
                 <p>Sex:
-                  <input name="group1" type="radio" id="male" />
+                  <input value='male' name="sex" type="radio" id="male" />
                   <label for="male">Male</label>
-                  <input name="group1" type="radio" id="female" />
+                  <input value ='female' name="sex" type="radio" id="female" />
                   <label for="female">Female</label>
                 </p>
 
                 <div class="input-field">
-                  <input placeholder="ie. 24" id="age" type="text" class="validate">
+                  <input placeholder="ie. 24" id="age" type="text" class="validate" value="">
                   <label for="age">Your age:</label>
                 </div>
 
@@ -100,6 +100,8 @@
                   <input placeholder="ie. 165" id="weight" type="text" class="validate">
                   <label for="weight">Your weight (lbs):</label>
                 </div>
+
+                <button type="button" name="button" class="btn btn-large waves-effect">Submit</button>
 
               </form>
             </div>

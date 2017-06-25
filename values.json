@@ -1,0 +1,14 @@
+{
+  "weight": {
+    "value": "",
+    "unit": "lb"
+  },
+  "height": {
+    "value": "",
+    "unit": "ft-in"
+  },
+  "sex": "",
+  "age": "",
+  "waist": "",
+  "hip": ""
+}
