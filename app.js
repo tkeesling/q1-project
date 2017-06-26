@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// button click functionality
-	$('.btn').click(function(e) {
+	$('.submitbtn').click(function(e) {
 		e.preventDefault
 		// capture values from input form
 		var sex = $('input[name=sex]:checked').val()
@@ -28,10 +28,16 @@ $(document).ready(function() {
 				dataType: 'json',
 				data: JSON.stringify(obj),
 				success: function(data) {
-					var object = data
-					console.log(object);
-				}
-			}) // end of .ajax
+					var pBMI = data.bmi.value
+					var pHealth = data.bmi.status
+					var pRisk = data.bmi.risk
+					console.log(data);
+					// append the results section
+					$('.pBMI').text(pBMI)
+					$('.pHealth').text(pHealth)
+					$('.pRisk').text(pRisk)
+				} // end of success
+			}) // end of AJAX
 		}) // end of getJSON
 	}) // end of btn click
 }) // end of doc ready

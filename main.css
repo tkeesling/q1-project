@@ -9,10 +9,29 @@ main {
 }
 
 .card {
-  margin-top: 2rem;
+  border-radius: 1rem 0 0 0;
 }
 
-.middleSection {}
+.center-btn {
+  text-align: center;
+}
+
+.height-box {
+  display: flex;
+}
+
+.height-box .inches {
+  padding-left: 1em;
+  flex: 2;
+}
+
+.height-box .inches label {
+  text-align: center;
+}
+
+.pResults {
+  font-style: italic;
+}
 
 
 /*<form action="#">
