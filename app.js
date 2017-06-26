@@ -7,6 +7,7 @@ $(document).ready(function() {
 		var age = $('#age').val()
 		var height = $('#height').val()
 		var weight = $('#weight').val()
+		console.log(height);
 
 		// attach values to local JSON
 		$.getJSON('/values.json', function(data) {
