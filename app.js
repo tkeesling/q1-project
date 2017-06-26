@@ -5,8 +5,11 @@ $(document).ready(function() {
 		// capture values from input form
 		var sex = $('input[name=sex]:checked').val()
 		var age = $('#age').val()
+		var inches = $('#inches').val()
 		var height = $('#height').val()
 		var weight = $('#weight').val()
+		// console.log(feet);
+		console.log(inches);
 		console.log(height);
 
 		// attach values to local JSON
