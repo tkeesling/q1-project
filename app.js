@@ -33,13 +33,30 @@ $(document).ready(function() {
 					var pBMI = data.bmi.value
 					var pHealth = data.bmi.status
 					var pRisk = data.bmi.risk
+					var idealWeight = data.ideal_weight
+					console.log(idealWeight);
 					console.log(data);
+
 					// append the results section
 					$('.pBMI').text(pBMI)
 					$('.pHealth').text(pHealth)
 					$('.pRisk').text(pRisk)
+					$('.yourWeight').text('Current weight: ' + weight + ' lbs')
+
+					function kgConverter(str) {
+						var arr = str.split(' ')
+						var numOne = removeAndConvert(arr[0])
+						var numTwo = removeAndConvert(arr[2])
+						var returnString = numOne + ' lbs' + ' to ' + numTwo + ' lbs'
+						$('.recWeight').text('Ideal weight range: ' + returnString)
+					}
+					kgConverter(idealWeight)
 				} // end of success
 			}) // end of AJAX
 		}) // end of getJSON
 	}) // end of btn click
+	function removeAndConvert(numArr) {
+		var onlyNum = (numArr.slice(0, -2) * 2.08).toFixed(1)
+		return onlyNum
+	}
 }) // end of doc ready

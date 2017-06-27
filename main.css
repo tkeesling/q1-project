@@ -45,32 +45,14 @@ main {
   margin-bottom: 0px;
 }
 
-.height-box {
-  display: flex;
-}
-
-.height-box .feet, .height-box .inches {
-  flex: 2;
-}
-
 .height-box .inches {
   padding-left: 1em;
 }
 
 .height-box .inches label {
-  text-align: center;
+  text-align: right;
 }
 
 .pResults {
   font-style: italic;
 }
-
-
-/*<form action="#">
-  <p>Sex:
-    <input name="sex" type="radio" id="male" />
-    <label for="male">Male</label>
-    <input name="sex" type="radio" id="female" />
-    <label for="female">Female</label>
-  </p>
-</form>*/

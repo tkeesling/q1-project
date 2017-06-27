@@ -51,7 +51,8 @@
               </div>
               <div class="card-reveal deep-orange lighten-4">
                 <span class="card-title grey-text text-darken-4">Why use BMI?<i class="material-icons right">close</i></span>
-                <p>BMI is not a perfect measure, because it does not directly assess body fat. Muscle and bone are denser than fat, so an athlete or muscular person may have a high BMI, yet not have too much fat.</p><p> But most people are not athletes, and for most people, BMI is a very good gauge of their level of body fat.</p>
+                <p>BMI is not a perfect measure, because it does not directly assess body fat. Muscle and bone are denser than fat, so an athlete or muscular person may have a high BMI, yet not have too much fat.</p>
+                <p> But most people are not athletes, and for most people, BMI is a very good gauge of their level of body fat.</p>
               </div>
             </div>
           </div>
@@ -66,12 +67,13 @@
                 </div>
                 <div class="card-reveal deep-orange lighten-4">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Healthy BMI Ranges</span>
-                  <p>These BMI cut points in adults are the same for men and women, regardless of their age.</p><p> Worldwide, an estimated 1.5 billion adults over the age of 20-about 34 percent of the world’s adult population-are overweight or obese. By 2030, this is expected to rise to more than 3 billion people.</p>
+                  <p>These BMI cut points in adults are the same for men and women, regardless of their age.</p>
+                  <p> Worldwide, an estimated 1.5 billion adults over the age of 20-about 34 percent of the world’s adult population-are overweight or obese. By 2030, this is expected to rise to more than 3 billion people.</p>
                 </div>
               </div>
             </div>
 
-          <!-- <div class="center-align">
+            <!-- <div class="center-align">
             <a class="center-btn waves-effect waves-light btn">More Information Here</a>
           </div> -->
 
@@ -86,9 +88,9 @@
               <form class="myForm" action="/" method="post">
 
                 <p>
-                  <input value='m' name="sex" type="radio" id="male"/>
+                  <input value='m' name="sex" type="radio" id="male" />
                   <label for="male">Male</label>
-                  <input value='f' name="sex" type="radio" id="female"/>
+                  <input value='f' name="sex" type="radio" id="female" />
                   <label for="female">Female</label>
                 </p>
 
@@ -97,13 +99,13 @@
                   <label for="age">Your age:</label>
                 </div>
 
-                <div class="input-field height-box">
-                  <div class='feet'>
+                <div class="input-field height-box row">
+                  <div class='feet col s6'>
                     <input placeholder="ie. 6" id="feet" type="text" class="validate">
                     <label for="feet">Your height (ft):</label>
                   </div>
 
-                  <div class='inches'>
+                  <div class='inches col s6'>
                     <input placeholder="ie. 5" id="inches" type="text" class="validate">
                     <label for="inches">inches (in):</label>
                   </div>
@@ -127,6 +129,9 @@
               <span class="card-title"><u>Your Results</u>:</span>
               <h5>BMI:</h5>
               <p class='pBMI pResults'></p>
+              <h5>Ideal Weight Range:</h5>
+              <p class='yourWeight pResults'></p>
+              <p class='recWeight pResults'></p>
               <h5>Health Status:</h5>
               <p class='pHealth pResults'></p>
               <h5>Health Risks:</h5>
@@ -138,7 +143,6 @@
           </div>
         </div>
       </div>
-
     </section>
 
   </main>
