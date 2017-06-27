@@ -45,14 +45,6 @@ main {
   margin-bottom: 0px;
 }
 
-.height-box .inches {
-  padding-left: 1em;
-}
-
-.height-box .inches label {
-  text-align: right;
-}
-
 .pResults {
   font-style: italic;
 }
