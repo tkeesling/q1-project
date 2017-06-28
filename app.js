@@ -34,8 +34,6 @@ $(document).ready(function() {
 					var pHealth = data.bmi.status
 					var pRisk = data.bmi.risk
 					var idealWeight = data.ideal_weight
-					console.log(idealWeight);
-					console.log(data);
 
 					// append the results section
 					$('.pBMI').text(pBMI)
@@ -43,20 +41,24 @@ $(document).ready(function() {
 					$('.pRisk').text(pRisk)
 					$('.yourWeight').text('Current weight: ' + weight + ' lbs')
 
-					function kgConverter(str) {
-						var arr = str.split(' ')
-						var numOne = removeAndConvert(arr[0])
-						var numTwo = removeAndConvert(arr[2])
-						var returnString = numOne + ' lbs' + ' to ' + numTwo + ' lbs'
-						$('.recWeight').text('Ideal weight range: ' + returnString)
-					}
 					kgConverter(idealWeight)
+
 				} // end of success
 			}) // end of AJAX
 		}) // end of getJSON
 	}) // end of btn click
+
+	function kgConverter(str) {
+		var arr = str.split(' ')
+		var numOne = removeAndConvert(arr[0])
+		var numTwo = removeAndConvert(arr[2])
+		var returnString = numOne + ' lbs' + ' to ' + numTwo + ' lbs'
+		$('.recWeight').text('Ideal weight range: ' + returnString)
+	}
+
 	function removeAndConvert(numArr) {
-		var onlyNum = (numArr.slice(0, -2) * 2.08).toFixed(1)
+		var onlyNum = (numArr.slice(0, -2) * 2.05).toFixed(1)
 		return onlyNum
 	}
+
 }) // end of doc ready
