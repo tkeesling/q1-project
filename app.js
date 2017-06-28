@@ -1,5 +1,7 @@
 $(document).ready(function() {
 	// button click functionality
+	$('.modal').modal();
+
 	$('.submitbtn').click(function(e) {
 		e.preventDefault
 		// capture values from input form
