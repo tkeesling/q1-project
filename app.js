@@ -5,6 +5,8 @@ $(document).ready(function() {
 	$('.submitbtn').click(function(e) {
 		e.preventDefault
 		// capture values from input form
+		showLoading()
+
 		var sex = $('input[name=sex]:checked').val()
 		var age = $('#age').val()
 		var feet = $('#feet').val()
@@ -37,8 +39,7 @@ $(document).ready(function() {
 					var pHealth = data.bmi.status
 					var pRisk = data.bmi.risk
 					var idealWeight = data.ideal_weight
-
-					$('.modal-wrapper').removeClass('hide-modal')
+					showResults()
 
 					// append the results section
 					$('.pBMI').text(pBMI)
@@ -67,6 +68,16 @@ $(document).ready(function() {
 	function removeAndConvert(numArr) {
 		var onlyNum = (numArr.slice(0, -2) * 2.05).toFixed(1)
 		return onlyNum
+	}
+
+	function showLoading() {
+		$('.logo').addClass('logo-hide')
+		$('.loading').removeClass('loading-hide')
+	}
+
+	function showResults() {
+		$('.loading').addClass('loading-hide')
+		$('.finalResults').removeClass('finalResults-hide')
 	}
 
 }) // end of doc ready
