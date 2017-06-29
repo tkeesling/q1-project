@@ -66,6 +66,17 @@ h5 {
   font-size: 1.5rem;
 }
 
+.logo-wrapper {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+}
+
+.logo {
+  width: 350px;
+  height: 350px;
+}
+
 .logo-hide {
   display: none;
 }

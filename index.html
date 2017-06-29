@@ -83,7 +83,7 @@
       <div class="row">
         <div class="col s12 m6 l6">
           <div class="card deep-orange lighten-3">
-            <div style="height: 449px" class="card-content black-text">
+            <div class="card-content black-text">
               <span class="card-title">Enter Your Info Here:</span>
               <form class="myForm" action="/" method="post">
 
@@ -95,24 +95,24 @@
                 </p>
 
                 <div class="input-field">
-                  <input placeholder="ie. 24" id="age" type="number" class="validate" min="1" max="99">
-                  <label for="age">Your age:</label>
+                  <input placeholder="ie. 24" id="age" type="number" class="validate" min="20" max="99" required>
+                  <label data-error="Please enter a number between 20-99" for="age">Your age:</label>
                 </div>
 
                 <div class="height-box row">
                   <div class='feet col s6 input-field'>
-                    <input placeholder="ie. 6" id="feet" type="number" min="0" max="7" class="validate">
+                    <input placeholder="ie. 6" id="feet" type="number" min="4" max="7" class="validate">
                     <label for="feet">Your height (ft):</label>
                   </div>
 
                   <div class='inches col s6 input-field'>
                     <input placeholder="ie. 5" id="inches" type="number" min="0" max="11.99" class="validate">
-                    <label for="inches">inches (in):</label>
+                    <label data-error="Please enter a number 0-11.5" for="inches">inches (in):</label>
                   </div>
                 </div>
 
                 <div class="input-field">
-                  <input placeholder="ie. 165" id="weight" type="number" min="0" max="260" class="validate">
+                  <input placeholder="ie. 165" id="weight" type="number" min="60" max="260" class="validate">
                   <label for="weight">Your weight (lbs):</label>
                 </div>
 
@@ -126,15 +126,17 @@
         <div class="col s12 m6 l6">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text results">
-              <img class="logo" src="/d580dd91-8be3-41a1-8607-dd4082fd20f7.png" alt="Logo">
 
-              <div class="loading loading-hide">
-              <h4>"Working it out"</h4>
-              <img src="https://media.giphy.com/media/13GhkJHCOJIiDm/giphy.gif" alt="Working">
+              <div class="logo-wrapper">
+                <img class="logo" src="/d580dd91-8be3-41a1-8607-dd4082fd20f7.png" alt="Logo">
+                <div class="loading loading-hide">
+                  <h4>"Working it out"</h4>
+                  <img src="http://i1.kym-cdn.com/photos/images/newsfeed/001/259/510/36c.gif" alt="Working">
+                </div>
               </div>
 
               <div class="finalResults finalResults-hide">
-                <span class="card-title"><u>Your Results</u>:</span>
+                <span class="card- requiredtitle"><u>Your Results</u>:</span>
                 <h5>BMI:</h5>
                 <p class='pBMI pResults'></p>
                 <div class="divider"></div>
@@ -158,7 +160,8 @@
                     </div>
                   </div>
                 </div>
-              </div> <!-- final results -->
+              </div>
+              <!-- final results -->
 
             </div>
           </div>
