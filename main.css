@@ -2,6 +2,7 @@ body {
   display: flex;
   min-height: 100vh;
   flex-direction: column;
+  background-color: #EEF4ED;
 }
 
 main {
@@ -47,7 +48,7 @@ main {
 }
 
 ::-webkit-input-placeholder {
-  color: #747269;
+  color: #EEF4ED;
 }
 
 input:focus::-webkit-input-placeholder {
@@ -70,11 +71,12 @@ h5 {
   display: flex;
   flex: 1;
   justify-content: center;
+  padding-left: 60px;
 }
 
 .logo {
   width: 350px;
-  height: 350px;
+  height: 340px;
 }
 
 .logo-hide {
@@ -92,4 +94,16 @@ h5 {
 .canvas-wrapper {
   max-height: 450px;
   max-width: 450px;
+}
+
+.nav-wrapper {
+  background-color: #0B2545;
+}
+
+.card {
+  background-color: #8DA9C4;
+}
+
+.page-footer {
+  background-color: #0B2545;
 }
