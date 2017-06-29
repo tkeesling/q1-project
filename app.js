@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	// button click functionality
-	$('.modal').modal();
+	$('.modal').modal()
 
 	$('.submitbtn').click(function(e) {
 		e.preventDefault
@@ -11,6 +11,7 @@ $(document).ready(function() {
 		var inches = $('#inches').val()
 		var height = feet + '-' + inches
 		var weight = $('#weight').val()
+		var heightChart = feet * 12 + parseInt(inches)
 
 		// attach values to local JSON
 		$.getJSON('/values.json', function(data) {
@@ -44,6 +45,7 @@ $(document).ready(function() {
 					$('.yourWeight').text('Current weight: ' + weight + ' lbs')
 
 					kgConverter(idealWeight)
+					makeAChart(heightChart, weight)
 
 				} // end of success
 			}) // end of AJAX
