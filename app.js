@@ -4,59 +4,67 @@ $(document).ready(function() {
 
 	$('.submitbtn').click(function(e) {
 		e.preventDefault
-		// capture values from input form
-		$('.finalResults').addClass('finalResults-hide')
-		showLoading()
 
-		var sex = $('input[name=sex]:checked').val()
-		var age = $('#age').val()
-		var feet = $('#feet').val()
-		var inches = $('#inches').val()
-		var height = feet + '-' + inches
-		var weight = $('#weight').val()
-		var heightChart = feet * 12 + parseInt(inches)
+		if ($('#age').hasClass('valid') &&
+			$('#feet').hasClass('valid') &&
+			$('#inches').hasClass('valid') &&
+			$('#weight').hasClass('valid')) {
 
-		// attach values to local JSON
-		$.getJSON('/values.json', function(data) {
-			var obj = data
-			obj.sex = sex
-			obj.age = age
-			obj.weight.value = weight
-			obj.height.value = height
-			setTimeout(function() {
-				// send AJAX POST request
-				$.ajax({
-					url: 'https://bmi.p.mashape.com/',
-					headers: {
-						'X-Mashape-Key': 'DTVX3E5LwAmshSXl3UmrvwEF8nwJp1dXZzXjsnVcj6pKHf8U3n',
-						'Content-Type': 'application/json',
-						'Accept': 'application/json'
-					},
-					method: 'POST',
-					dataType: 'json',
-					data: JSON.stringify(obj),
-					success: function(data) {
-						var pBMI = data.bmi.value
-						var pHealth = data.bmi.status
-						var pRisk = data.bmi.risk
-						var idealWeight = data.ideal_weight
-						showResults()
+			$('.finalResults').addClass('finalResults-hide')
+			showLoading()
+			// capture values from input form
+			var sex = $('input[name=sex]:checked').val()
+			var age = $('#age').val()
+			var feet = $('#feet').val()
+			var inches = $('#inches').val()
+			var height = feet + '-' + inches
+			var weight = $('#weight').val()
+			var heightChart = feet * 12 + parseInt(inches)
 
-						// append the results section
-						$('.pBMI').text(pBMI)
-						$('.pHealth').text(pHealth)
-						$('.pRisk').text(pRisk)
-						$('.yourWeight').text('Current weight: ' + weight + ' lbs')
+			// attach values to local JSON
+			$.getJSON('/values.json', function(data) {
+				var obj = data
+				obj.sex = sex
+				obj.age = age
+				obj.weight.value = weight
+				obj.height.value = height
+				setTimeout(function() {
+					// send AJAX POST request
+					$.ajax({
+						url: 'https://bmi.p.mashape.com/',
+						headers: {
+							'X-Mashape-Key': 'DTVX3E5LwAmshSXl3UmrvwEF8nwJp1dXZzXjsnVcj6pKHf8U3n',
+							'Content-Type': 'application/json',
+							'Accept': 'application/json'
+						},
+						method: 'POST',
+						dataType: 'json',
+						data: JSON.stringify(obj),
+						success: function(data) {
+							var pBMI = data.bmi.value
+							var pHealth = data.bmi.status
+							var pRisk = data.bmi.risk
+							var idealWeight = data.ideal_weight
+							showResults()
 
-						kgConverter(idealWeight)
-						makeAChart(heightChart, weight)
-					}, // end of success
-					error: function() {
-						alert('Are you sure your information is correct?')
-					}
-				}) // end of AJAX
-			}, 3000) // set timeout
-		}) // end of getJSON
+							// append the results section
+							$('.pBMI').text(pBMI)
+							$('.pHealth').text(pHealth)
+							$('.pRisk').text(pRisk)
+							$('.yourWeight').text('Current weight: ' + weight + ' lbs')
+
+							kgConverter(idealWeight)
+							makeAChart(heightChart, weight)
+						}, // end of success
+						error: function() {
+							alert('Are you sure your information is correct?')
+						}
+					}) // end of AJAX
+				}, 3000) // set timeout
+			}) // end of getJSON
+		} else {
+			alert('Fill out the form, you dope!')
+		}
 	}) // end of btn click
 
 	function kgConverter(str) {
