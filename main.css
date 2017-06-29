@@ -49,6 +49,10 @@ main {
   color: #747269;
 }
 
+input:focus::-webkit-input-placeholder {
+  color: transparent;
+}
+
 .row {
   margin-bottom: 0px;
 }
