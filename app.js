@@ -38,6 +38,8 @@ $(document).ready(function() {
 					var pRisk = data.bmi.risk
 					var idealWeight = data.ideal_weight
 
+					$('.modal-wrapper').removeClass('hide-modal')
+
 					// append the results section
 					$('.pBMI').text(pBMI)
 					$('.pHealth').text(pHealth)

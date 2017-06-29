@@ -60,3 +60,7 @@ input:focus::-webkit-input-placeholder {
 .pResults {
   font-style: italic;
 }
+
+.hide-modal {
+  display: none;
+}
