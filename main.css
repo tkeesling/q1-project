@@ -88,3 +88,8 @@ h5 {
 .finalResults-hide {
   display: none;
 }
+
+.canvas-wrapper {
+  max-height: 450px;
+  max-width: 450px;
+}
