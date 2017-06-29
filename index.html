@@ -31,8 +31,8 @@
           <div class="card card-top-row deep-orange lighten-3">
             <div class="card-content">
               <span class="card-title activator grey-text text-darken-4"><b>What is BMI?</b><i class="material-icons right">more_vert</i></span>
-              <p>Body mass index (BMI) is a measure of body fat based on your weight in relation to your height, and applies to most adult men and women aged 20 and over.</p><br><br><br>
-              <p><a href="#">This is a link</a></p>
+              <p>Body mass index (BMI) is a measure of body fat based on your weight in relation to your height, and applies to most adult men and women aged 20 and over.</p><br><br>
+              <p><a href="http://www.webmd.com/a-to-z-guides/body-mass-index-bmi-for-adults">Learn More</a></p>
             </div>
             <div class="card-reveal deep-orange lighten-4">
               <span class="card-title grey-text text-darken-4">What is BMI?<i class="material-icons right">close</i></span>
@@ -47,7 +47,7 @@
               <div class="card-content">
                 <span class="card-title activator grey-text text-darken-4"><b>Why use BMI?</b><i class="material-icons right">more_vert</i></span>
                 <p>Research has shown that BMI is strongly correlated with the gold-standard methods for measuring body fat. BMI accounts for the fact that taller people have more tissue than shorter people, and so they tend to weigh more.</p><br>
-                <p><a href="#">This is a link</a></p>
+                <p><a href="https://www.hsph.harvard.edu/obesity-prevention-source/obesity-definition/obesity-definition-full-story/">Learn More</a></p>
               </div>
               <div class="card-reveal deep-orange lighten-4">
                 <span class="card-title grey-text text-darken-4">Why use BMI?<i class="material-icons right">close</i></span>
@@ -63,7 +63,7 @@
                 <div class="card-content">
                   <span class="card-title activator grey-text text-darken-4"><i class="material-icons right">more_vert</i><b>Healthy BMI Ranges</b></span>
                   <p>The World Health Organization (WHO) states that for adults, the healthy range for BMI is between 18.5 and 24.9.Overweight is defined as a body mass index of 25 to 29.9, and obesity is defined as a body mass index of 30 or higher.</p><br>
-                  <p><a href="#">This is a link</a></p>
+                  <p><a href="http://www.medicalnewstoday.com/info/obesity/what-is-bmi.php">Learn More</a></p>
                 </div>
                 <div class="card-reveal deep-orange lighten-4">
                   <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i>Healthy BMI Ranges</span>
@@ -89,30 +89,30 @@
 
                 <p>
                   <input value='m' name="sex" type="radio" id="male" />
-                  <label for="male">Male</label>
+                  <label class="black-text" for="male">Male</label>
                   <input value='f' name="sex" type="radio" id="female" />
-                  <label for="female">Female</label>
+                  <label class="black-text" for="female">Female</label>
                 </p>
 
                 <div class="input-field">
-                  <input placeholder="ie. 24" id="age" type="text" class="validate" value="">
+                  <input placeholder="ie. 24" id="age" type="number" class="validate" value="">
                   <label for="age">Your age:</label>
                 </div>
 
                 <div class="height-box row">
                   <div class='feet col s6 input-field'>
-                    <input placeholder="ie. 6" id="feet" type="text" class="validate">
+                    <input placeholder="ie. 6" id="feet" type="number" class="validate">
                     <label for="feet">Your height (ft):</label>
                   </div>
 
                   <div class='inches col s6 input-field'>
-                    <input placeholder="ie. 5" id="inches" type="text" class="validate">
+                    <input placeholder="ie. 5" id="inches" type="number" class="validate">
                     <label for="inches">inches (in):</label>
                   </div>
                 </div>
 
                 <div class="input-field">
-                  <input placeholder="ie. 165" id="weight" type="text" class="validate">
+                  <input placeholder="ie. 165" id="weight" type="number" class="validate">
                   <label for="weight">Your weight (lbs):</label>
                 </div>
 
@@ -129,11 +129,14 @@
               <span class="card-title"><u>Your Results</u>:</span>
               <h5>BMI:</h5>
               <p class='pBMI pResults'></p>
+              <div class="divider"></div>
               <h5>Ideal Weight Range:</h5>
               <p class='yourWeight pResults'></p>
               <p class='recWeight pResults'></p>
+              <div class="divider"></div>
               <h5>Health Status:</h5>
               <p class='pHealth pResults'></p>
+              <div class="divider"></div>
               <h5>Health Risks:</h5>
               <p class='pRisk pResults'></p>
             </div>
@@ -156,23 +159,6 @@
   </main>
 
   <footer class="page-footer blue-grey lighten-1">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 s12">
-          <h5 class="white-text">Footer Content</h5>
-          <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-        </div>
-        <div class="col l4 offset-l2 s12">
-          <h5 class="white-text">Links</h5>
-          <ul>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-            <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
     <div class="footer-copyright">
       <div class="container">
         © 2014 Copyright Text

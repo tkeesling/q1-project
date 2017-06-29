@@ -1,6 +1,5 @@
 function makeAChart(height, weight) {
-	console.log(height);
-	console.log(weight);
+
 	const chart = $('#lineChart')
 
 	var data = {

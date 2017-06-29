@@ -37,8 +37,16 @@ main {
   opacity: 1;
 }
 
-.btn {
-  text-align: center;
+.divider {
+  margin-top: 1rem;
+}
+
+.input-field label {
+  color: #000;
+}
+
+::-webkit-input-placeholder {
+  color: #747269;
 }
 
 .row {

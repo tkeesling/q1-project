@@ -46,8 +46,10 @@ $(document).ready(function() {
 
 					kgConverter(idealWeight)
 					makeAChart(heightChart, weight)
-
-				} // end of success
+				}, // end of success
+				error: function() {
+					alert('Are you sure your information is correct?')
+				}
 			}) // end of AJAX
 		}) // end of getJSON
 	}) // end of btn click
