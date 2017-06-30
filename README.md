@@ -26,3 +26,6 @@ The BMI (body mass index) Calculator takes a persons' age, sex, weight, and heig
   - Materialize
   - Chart.JS
   - Mashape's BMI API
+
+# PROJECT VIDEO TUTORIAL
+[link](https://github.com/tkeesling/q1-project/blob/master/BMIami%20Project%20Video.mov)
